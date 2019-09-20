@@ -1,5 +1,8 @@
 # virtual host
 
+# force default root's prompt to be used always
+sed "/^Defaults.*env_keep/{s: PS1 : :g}" -i.bak /etc/sudoers
+
 sudo mkdir -p /app-var/cache
 sudo mkdir -p /app-var/logs
 rm -rf /app-var/cache/*

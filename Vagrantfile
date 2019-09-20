@@ -19,5 +19,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "/app/vm/vhost.sh", run: "always"
   config.vm.provision "shell", inline: "/app/backend-php/reload-fixtures.sh", run: "always"
   config.vm.provision "shell", inline: "chown -R vagrant:vagrant /app-var && chmod -R 777 /app-var && chmod -R 777 /tmp", run: "always"
-  config.vm.provision "shell", inline: "mkdir -p /home/vagrant/bin && curl -f -o /home/vagrant/bin/aiqa https://vm-box-storage.s3.eu-central-1.amazonaws.com/aiqa && chmod u+x /home/vagrant/bin/aiqa && chown vagrant:vagrant /home/vagrant/bin/aiqa", run: "always"
+  config.vm.provision "shell", inline: "mkdir -p /home/vagrant/bin && curl -fsSL -o /home/vagrant/bin/aiqa https://vm-box-storage.s3.eu-central-1.amazonaws.com/aiqa && chmod u+x /home/vagrant/bin/aiqa && chown vagrant:vagrant /home/vagrant/bin/aiqa", run: "always"
 end
