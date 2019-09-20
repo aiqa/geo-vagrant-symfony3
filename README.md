@@ -71,3 +71,7 @@ cd geo-vagrant-symfony3
 
 * [https://geography.lh](https://geography.lh)
 
+
+## 4. REST API documentation
+
+* [REST API documentation](documentation/aiqa-geo-rest-api.html)
