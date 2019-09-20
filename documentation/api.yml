@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
     title: "AIQA GEO API"
-    version: 0.1.1
+    version: 0.1.2
     contact:
         url: 'https://aiqa.tech'
         email: contact@aiqa.tech
