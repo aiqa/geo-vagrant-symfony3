@@ -1,0 +1,289 @@
+openapi: 3.0.0
+info:
+    title: "AIQA GEO API"
+    version: 0.1.0
+    contact:
+        url: 'https://aiqa.tech'
+        email: contact@aiqa.tech
+servers:
+    -   url: "https://geography.lh"
+        description: "Local environment"
+tags:
+    -   name: city
+        description: City
+    -   name: mountain
+        description: Mountain
+    -   name: river
+        description: River
+x-tagGroups:
+    -   name: City
+        tags:
+            - city
+    -   name: River
+        tags:
+            - river
+    -   name: Mountain
+        tags:
+            - mountain
+paths:
+    /api/city/{cityId}:
+        parameters:
+            -   name: cityId
+                in: path
+                description: "City id parameter."
+                required: true
+                schema:
+                    type: integer
+                    format: int32
+        get:
+            description: ""
+            summary: "Fetching of the single city."
+            operationId: get_city_id
+            tags:
+                - city
+            responses:
+                200:
+                    description: Successfuly fetched a single city.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/city.json
+        put:
+            description: ""
+            summary: "Edition of the existing city."
+            operationId: put_city_id
+            tags:
+                - city
+            responses:
+                200:
+                    description: Successfuly edited a single city.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/city.json
+                400:
+                    description: Incorrect request body.
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: redoc/request/city.json
+                required: true
+        delete:
+            description: ""
+            summary: "Deleting of the single city."
+            operationId: delete_city_id
+            tags:
+                - city
+            responses:
+                204:
+                    description: Successfuly deleted a single city.
+    /api/city:
+        get:
+            description: ""
+            summary: "Fetching of a list of cities."
+            operationId: get_city
+            tags:
+                - city
+            responses:
+                200:
+                    description: Success.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/city_array.json
+        post:
+            description: ""
+            summary: "Creation of a new city."
+            operationId: post_city
+            tags:
+                - city
+            responses:
+                201:
+                    description: Successfuly created the new city.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/city.json
+                403:
+                    description: Incorrect request body.
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: redoc/request/city.json
+                required: true
+    /api/river/{riverId}:
+        parameters:
+            -   name: riverId
+                in: path
+                description: "River id parameter."
+                required: true
+                schema:
+                    type: integer
+                    format: int32
+        get:
+            description: ""
+            summary: "Fetching of the single river."
+            operationId: get_river_id
+            tags:
+                - river
+            responses:
+                200:
+                    description: Successfuly fetched a single river.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/river.json
+        put:
+            description: ""
+            summary: "Edition of the existing river."
+            operationId: put_river_id
+            tags:
+                - river
+            responses:
+                200:
+                    description: Successfuly edited a single river.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/river.json
+                400:
+                    description: Incorrect request body.
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: redoc/request/river.json
+                required: true
+        delete:
+            description: ""
+            summary: "Deleting of the single river."
+            operationId: delete_river_id
+            tags:
+                - river
+            responses:
+                204:
+                    description: Successfuly deleted a single river.
+    /api/river:
+        get:
+            description: ""
+            summary: "Fetching of a list of rivers."
+            operationId: get_river
+            tags:
+                - river
+            responses:
+                200:
+                    description: Success.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/river_array.json
+        post:
+            description: ""
+            summary: "Creation of a new river."
+            operationId: post_river
+            tags:
+                - river
+            responses:
+                201:
+                    description: Successfuly created the new river.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/river.json
+                403:
+                    description: Incorrect request body.
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: redoc/request/river.json
+                required: true
+    /api/mountain/{mountainId}:
+        parameters:
+            -   name: mountainId
+                in: path
+                description: "Mountain id parameter."
+                required: true
+                schema:
+                    type: integer
+                    format: int32
+        get:
+            description: ""
+            summary: "Fetching of the single mountain."
+            operationId: get_mountain_id
+            tags:
+                - mountain
+            responses:
+                200:
+                    description: Successfuly fetched a single mountain.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/mountain.json
+        put:
+            description: ""
+            summary: "Edition of the existing mountain."
+            operationId: put_mountain_id
+            tags:
+                - mountain
+            responses:
+                200:
+                    description: Successfuly edited a single mountain.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/mountain.json
+                400:
+                    description: Incorrect request body.
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: redoc/request/mountain.json
+                required: true
+        delete:
+            description: ""
+            summary: "Deleting of the single mountain."
+            operationId: delete_mountain_id
+            tags:
+                - mountain
+            responses:
+                204:
+                    description: Successfuly deleted a single mountain.
+    /api/mountain:
+        get:
+            description: ""
+            summary: "Fetching of a list of mountain."
+            operationId: get_mountain
+            tags:
+                - mountain
+            responses:
+                200:
+                    description: Success.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/mountain_array.json
+        post:
+            description: ""
+            summary: "Creation of a new mountain."
+            operationId: post_mountain
+            tags:
+                - mountain
+            responses:
+                201:
+                    description: Successfuly created the new mountain.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: redoc/response/mountain.json
+                403:
+                    description: Incorrect request body.
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: redoc/request/mountain.json
+                required: true

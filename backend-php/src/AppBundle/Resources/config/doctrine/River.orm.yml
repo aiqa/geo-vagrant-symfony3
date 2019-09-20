@@ -1,0 +1,22 @@
+AppBundle\Entity\River:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RiverRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        length:
+            type: integer
+        createdAt:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks:
+        prePersist:
+            - updateTimestamps

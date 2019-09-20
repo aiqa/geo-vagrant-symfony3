@@ -1,0 +1,17 @@
+{
+    "title": "Request: city",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "population": {
+            "type": "integer"
+        },
+        "createdAt": [
+            "string",
+            "null"
+        ]
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+    "title": "Response: mountain",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "height": {
+            "type": "integer"
+        },
+        "createdAt": [
+            "string",
+            "null"
+        ]
+    },
+    "required": [
+        "id",
+        "name",
+        "height",
+        "createdAt"
+    ],
+    "additionalProperties": false
+}

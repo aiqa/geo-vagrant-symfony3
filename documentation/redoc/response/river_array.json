@@ -1,0 +1,30 @@
+{
+    "title": "Response: river array",
+    "type": "array",
+    "items": {
+        "title": "Response: river",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "string"
+            },
+            "length": {
+                "type": "integer"
+            },
+            "createdAt": {
+                "type": "string",
+                "nullable": true
+            }
+        },
+        "required": [
+            "id",
+            "name",
+            "length",
+            "createdAt"
+        ],
+        "additionalProperties": false
+    }
+}

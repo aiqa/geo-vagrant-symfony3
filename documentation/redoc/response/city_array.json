@@ -1,0 +1,30 @@
+{
+    "title": "Response: city array",
+    "type": "array",
+    "items": {
+        "title": "Response: city",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "string"
+            },
+            "population": {
+                "type": "integer"
+            },
+            "createdAt": {
+                "type": "string",
+                "nullable": true
+            }
+        },
+        "required": [
+            "id",
+            "name",
+            "population",
+            "createdAt"
+        ],
+        "additionalProperties": false
+    }
+}

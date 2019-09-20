@@ -1,0 +1,17 @@
+{
+    "title": "Request: mountain",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "height": {
+            "type": "integer"
+        },
+        "createdAt": [
+            "string",
+            "null"
+        ]
+    },
+    "additionalProperties": false
+}

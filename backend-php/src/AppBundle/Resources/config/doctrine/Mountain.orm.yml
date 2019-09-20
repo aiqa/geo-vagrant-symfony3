@@ -1,0 +1,22 @@
+AppBundle\Entity\Mountain:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\MountainRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        height:
+            type: integer
+        createdAt:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks:
+        prePersist:
+            - updateTimestamps

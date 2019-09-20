@@ -1,0 +1,17 @@
+{
+    "title": "Request: river",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "length": {
+            "type": "integer"
+        },
+        "createdAt": [
+            "string",
+            "null"
+        ]
+    },
+    "additionalProperties": false
+}

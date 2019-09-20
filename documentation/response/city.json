@@ -1,0 +1,26 @@
+{
+    "title": "Response: city",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "population": {
+            "type": "integer"
+        },
+        "createdAt": [
+            "string",
+            "null"
+        ]
+    },
+    "required": [
+        "id",
+        "name",
+        "population",
+        "createdAt"
+    ],
+    "additionalProperties": false
+}

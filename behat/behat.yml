@@ -1,0 +1,34 @@
+default:
+    translation:
+        locale: en
+
+    formatters:
+        pretty:
+            verbose:  true
+            paths:    false
+            snippets: false
+
+    suites:
+        default:
+            contexts:
+                - FeatureContext:
+                    parameters:
+                       base_url:  'https://geography.lh'
+                - behatch:context:browser
+                - behatch:context:debug
+                - behatch:context:system
+                - behatch:context:json
+                - behatch:context:table
+                - behatch:context:rest
+                - behatch:context:xml
+
+    extensions:
+        Behat\MinkExtension:
+            base_url:  'https://geography.lh/'
+            browser_name: chrome
+            sessions:
+                default:
+                    goutte:
+                        guzzle_parameters:
+                            verify: false
+        Behatch\Extension: ~

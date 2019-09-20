@@ -1,0 +1,16 @@
+filename:    'version.txt'
+regex:       '|(?P<version>[\d\.]+)|'
+replacement: '{{ version }}'
+
+replacements:
+
+    -
+        filename:    'backend-php/app/Resources/views/default/index.html.twig'
+        regex:       '|<h3>ver. v(?P<version>[\d\.]+)</h3>|'
+        replacement: '<h3>ver. v{{ version }}</h3>'
+
+    -
+        filename:    'documentation/api.yml'
+        regex:       '|version: (?P<version>[\d\.]+)|'
+        replacement: 'version: {{ version }}'
+

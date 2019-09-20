@@ -1,0 +1,26 @@
+{
+    "title": "Response: river",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "length": {
+            "type": "integer"
+        },
+        "createdAt": [
+            "string",
+            "null"
+        ]
+    },
+    "required": [
+        "id",
+        "name",
+        "length",
+        "createdAt"
+    ],
+    "additionalProperties": false
+}

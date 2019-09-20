@@ -1,0 +1,22 @@
+AppBundle\Entity\City:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CityRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        population:
+            type: integer
+        createdAt:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks:
+        prePersist:
+            - updateTimestamps
