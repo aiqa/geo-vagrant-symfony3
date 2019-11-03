@@ -1,0 +1,16 @@
+*                                      text=auto
+*.sh                                   eol=lf
+*.yml                                  eol=lf
+*.md                                   eol=lf
+*.txt                                  eol=lf
+*.sql                                  eol=lf
+*.ini                                  eol=lf
+*.dist                                 eol=lf
+*.json                                 eol=lf
+*.lock                                 eol=lf
+*.conf                                 eol=lf
+/vm/etc/host                           eol=lf
+.gitattributes                         eol=lf
+.gitignore                             eol=lf
+Vagrantfile                            eol=lf
+/.bash_profile                         eol=lf
