@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "aiqa/geo-vagrant-symfony3",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "AIQA GEO EXAMPLE",
     "autoload": {
         "psr-4": {
             "AppBundle\\": "src/AppBundle"
