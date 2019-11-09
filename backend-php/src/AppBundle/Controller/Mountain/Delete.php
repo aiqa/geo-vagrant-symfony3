@@ -2,11 +2,11 @@
 
 namespace AppBundle\Controller\Mountain;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Controller\GenericController;
 use AppBundle\Entity\Mountain;
 use AppBundle\RestApi\Mountain\Delete as RestApiDeleteService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class Delete extends GenericController
