@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "c7nmp_updated_v7.7.1"
-  config.vm.box_url = "https://s3.eu-central-1.amazonaws.com/vm-box-storage/c7nmp_updated_v7.7.1.box"
+  config.vm.box = "geo_v0.2.2"
+  config.vm.box_url = "https://s3.eu-central-1.amazonaws.com/vm-box-storage/geo_v0.2.2.box"
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "4096"]
