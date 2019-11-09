@@ -2,11 +2,11 @@
 
 namespace AppBundle\Controller\City;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Controller\GenericController;
 use AppBundle\Entity\City;
 use AppBundle\RestApi\City\Delete as RestApiDeleteService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class Delete extends GenericController

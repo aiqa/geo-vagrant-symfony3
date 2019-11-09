@@ -2,11 +2,11 @@
 
 namespace AppBundle\Controller\City;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Controller\GenericController;
 use AppBundle\Entity\City;
 use AppBundle\RestApi\City\Put as RestApiPutService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\SerializerInterface;

@@ -2,10 +2,10 @@
 
 namespace AppBundle\Controller\Mountain;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Controller\GenericController;
 use AppBundle\RestApi\Mountain\GetList as RestApiGetListService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
 
