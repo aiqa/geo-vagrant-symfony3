@@ -6,8 +6,9 @@ GEOGRAPHY
 Software:
 
 ```
-MacOS Mojave
-10.14.6
+OPERATING SYSTEMS:
+    - MacOS Mojave 10.14.6
+    - Windows 10 Pro
 ```
 
 ```
