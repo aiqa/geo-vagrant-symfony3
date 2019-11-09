@@ -12,7 +12,7 @@ use Symfony\Component\Debug\Debug;
 
 set_time_limit(0);
 
-require ((getenv('COMPOSER_VENDOR_DIR') ?: __DIR__.'/../vendor').'/autoload.php');
+require '/app-var/vendor/autoload.php';
 
 $input = new ArgvInput();
 $env = $input->getParameterOption(['--env', '-e'], getenv('SYMFONY_ENV') ?: 'dev', true);

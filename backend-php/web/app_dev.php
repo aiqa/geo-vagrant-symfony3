@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 // for more information
 //umask(0000);
 
-require __DIR__.'/../vendor/autoload.php';
+require '/app-var/vendor/autoload.php';
 Debug::enable();
 
 $kernel = new AppKernel('dev', true);
