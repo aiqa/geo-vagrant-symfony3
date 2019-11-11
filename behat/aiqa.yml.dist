@@ -16,8 +16,9 @@ user:
     systemFamily: 'unix'
     # email: GIT_CONFIG
     # email: LAST_COMMIT_AUTHOR
-    email: 'user@example.net'
-    apiToken: '11de1ae1-f5d6-4894-9769-208608c17ea9'
+    email: 'demo@aiqa.tech'
+    # password: thisIsTheDemo987ACCount
+    apiToken: '33f1bca8-accb-481b-ae4c-b662d5b656b1'
 testTool:
     type: 'parallel'
     reportPath: './__ci_parallel.log'
