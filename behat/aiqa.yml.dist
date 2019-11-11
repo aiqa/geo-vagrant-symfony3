@@ -1,0 +1,50 @@
+#
+# AIQA configuration file
+#
+
+aiqa:
+    apiUrl: 'https://demo.aiqa.tech/api/'
+    cliTimeout: 100.0
+project:
+    id: 1
+    name: 'GEO API (PHP/BEHAT)'
+    rootFolder: 'aiqa-geography'
+git:
+    mainBranch: 'master'
+    binaryPath: '/usr/bin/git'
+user:
+    systemFamily: 'unix'
+    email: 'user@example.net'
+    apiToken: '4f2be369-a262-4cb3-9185-915b02d1d87c'
+testTool:
+    type: 'parallel'
+    reportPath: './__ci_parallel.log'
+    regExp: '/^vendor\/bin\/behat --format=progress (.*\.feature)$/'
+testCases:
+    subfolder: 'behat'
+    scenariosPath: './__ci_scenarios_list.txt'
+    include:
+        -
+            directory: './features/api'
+            fileMask: '*.feature'
+    exclude:
+srcFiles:
+    subfolder: 'backend-php'
+    include:
+        -
+            directory: './../backend-php/src/AppBundle/Controller'
+            fileMask: '*.php'
+        -
+            directory: './../backend-php/src/AppBundle/RestApi'
+            fileMask: '*.php'
+        -
+            directory: './features/api'
+            fileMask: '*.feature'
+    exclude:
+        -
+            directory: 'vendor'
+configuration:
+    exportFilename: 'someFile.yml'
+pdepend:
+    binaryPath: '/app-var/vendor/pdepend/pdepend/src/bin/pdepend'
+encryption: false
