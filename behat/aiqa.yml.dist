@@ -6,16 +6,18 @@ aiqa:
     apiUrl: 'https://demo.aiqa.tech/api/'
     cliTimeout: 100.0
 project:
-    id: 1
-    name: 'GEO API (PHP/BEHAT)'
-    rootFolder: 'aiqa-geography'
+    id: 16
+    name: 'GEO API (PHP/BEHAT) [GITHUB]'
+    rootFolder: 'geo-vagrant-symfony3'
 git:
     mainBranch: 'master'
     binaryPath: '/usr/bin/git'
 user:
     systemFamily: 'unix'
+    # email: GIT_CONFIG
+    # email: LAST_COMMIT_AUTHOR
     email: 'user@example.net'
-    apiToken: '4f2be369-a262-4cb3-9185-915b02d1d87c'
+    apiToken: '11de1ae1-f5d6-4894-9769-208608c17ea9'
 testTool:
     type: 'parallel'
     reportPath: './__ci_parallel.log'
