@@ -6,7 +6,7 @@ aiqa:
     apiUrl: 'https://demo.aiqa.tech/api/'
     cliTimeout: 100.0
 project:
-    id: 16
+    id: 17
     name: 'GEO API (PHP/BEHAT) [GITHUB]'
     rootFolder: 'geo-vagrant-symfony3'
 git:
@@ -17,8 +17,7 @@ user:
     # email: GIT_CONFIG
     # email: LAST_COMMIT_AUTHOR
     email: 'demo@aiqa.tech'
-    # password: thisIsTheDemo987ACCount
-    apiToken: '33f1bca8-accb-481b-ae4c-b662d5b656b1'
+    apiToken: '4358d6f2-9912-43f5-b643-b5033060dc3c'
 testTool:
     type: 'parallel'
     reportPath: './__ci_parallel.log'
