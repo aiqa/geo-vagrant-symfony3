@@ -57,6 +57,6 @@ PS1+='[\[$pink\]\w\[$black\]]\[\033[0;33m\]$(__vcs_name) '
 PS1+='\[\033[00m\]\[$reset\]\n\[$reset\]\$ '
 export PS1
 
-cd /app/backend-php/
+cd /app/behat/
 
 # vim:ts=4:sw=4:et:syn=sh:
