@@ -12,11 +12,8 @@ Vagrant.configure("2") do |config|
 
 #  config.vm.network "private_network", ip: "10.0.0.120"
 
-#  config.vm.synced_folder ".", "/app", :nfs => true
-#  config.vm.synced_folder "../composer_cache", "/composer_cache", :nfs => true
-
-  config.vm.synced_folder ".", "/app"
-  config.vm.synced_folder "../composer_cache"
+  config.vm.synced_folder ".", "/app", :nfs => true
+  config.vm.synced_folder "../composer_cache", "/composer_cache", :nfs => true
 
   config.vm.provision "shell", inline: "cp /app/.bash_profile /home/vagrant"
 
