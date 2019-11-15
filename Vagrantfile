@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "geo_v0.2.2"
-  config.vm.box_url = "https://s3.eu-central-1.amazonaws.com/vm-box-storage/geo_v0.2.2.box"
+#  config.vm.box_url = "https://s3.eu-central-1.amazonaws.com/vm-box-storage/geo_v0.2.2.box"
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "4096"]
@@ -9,10 +9,13 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "geography.lh"
 
-  config.vm.network "private_network", ip: "10.0.0.120"
+#  config.vm.network "private_network", ip: "10.0.0.120"
 
-  config.vm.synced_folder ".", "/app", :nfs => true
-  config.vm.synced_folder "../composer_cache", "/composer_cache", :nfs => true
+#  config.vm.synced_folder ".", "/app", :nfs => true
+#  config.vm.synced_folder "../composer_cache", "/composer_cache", :nfs => true
+
+  config.vm.synced_folder ".", "/app"
+  config.vm.synced_folder "../composer_cache"
 
   config.vm.provision "shell", inline: "cp /app/.bash_profile /home/vagrant"
 
