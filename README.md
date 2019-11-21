@@ -100,6 +100,6 @@ composer install
 
 Demo account:
 
-* https://app.demo.tech
+* https://app.aiqa.tech
 * email: 'demo@aiqa.tech'
 * password: thisIsTheDemo987ACCount
