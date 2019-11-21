@@ -79,7 +79,7 @@ cd geo-vagrant-symfony3
 documentation/aiqa-geo-rest-api.html
 ```
 
-## 5. How to run REST API tests
+## 5. How to run REST API tests locally
 
 ```
 vagrant ssh
@@ -87,3 +87,19 @@ cd /app/behat
 composer install
 ./ci.sh
 ```
+
+## 6. How to run REST API with AIQA system
+
+```
+vagrant ssh
+cd /app/behat
+composer install
+./ci.sh --full-set
+```
+
+
+Demo account:
+
+* https://app.demo.tech
+* email: 'demo@aiqa.tech'
+* password: thisIsTheDemo987ACCount
