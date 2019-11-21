@@ -5,11 +5,14 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.25
+# ver. 0.1.29
 
 source _ci_vars.sh
 
 if ! [ -x "$(command -v vagrant)" ]; then
+  if [ "vagrant" == "$(whoami)" ]; then
+    /app/backend-php/reload.sh
+  fi
   exit
 fi
 

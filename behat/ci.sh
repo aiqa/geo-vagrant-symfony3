@@ -5,7 +5,7 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.25
+# ver. 0.1.29
 
 #
 # PARAMETERS
@@ -19,20 +19,40 @@
 
 source _ci_vars.sh
 
-./_ci_reload.sh
+CI_CURRENT_RUN=${CI_DEFAULT_RUN}
+
+if [ $# -eq 1 ]; then
+    CI_CURRENT_RUN=$1
+fi
+
+echo "==============================================================="
+echo CURRENT RUN: ${CI_CURRENT_RUN}
+echo "==============================================================="
+
+if [ ! -f "aiqa.yml" ]; then
+    cp aiqa.yml.dist aiqa.yml
+fi
+
+if [ ${CI_CUSTOM_RELOAD} -eq 1 ]; then
+    ./_ci_reload.sh
+fi
 
 if [ ${CI_CUSTOM_BUILD} -eq 1 ]; then
     ./_ci_build.sh
 fi
 
-if [ $# -eq 0 ]; then
+if [ -z "${CI_CURRENT_RUN}" ]; then
     ./_ci_find_local_tests.sh
     ./_ci_run_tests_with_parallel.sh
     ./_ci_verify_tests_results.sh
     exit
 fi
 
-./_ci_aiqa.sh $1
+./_ci_aiqa.sh ${CI_CURRENT_RUN}
+
+echo "==============================================================="
+echo CURRENT RUN: ${CI_CURRENT_RUN}
+echo "==============================================================="
 
 exit $?
 
