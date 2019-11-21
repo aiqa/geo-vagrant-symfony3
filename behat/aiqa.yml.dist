@@ -3,7 +3,7 @@
 #
 
 aiqa:
-    apiUrl: 'https://demo.aiqa.tech/api/'
+    apiUrl: 'https://app.aiqa.tech/api/'
     cliTimeout: 100.0
 project:
     id: 17
