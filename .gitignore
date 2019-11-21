@@ -44,14 +44,20 @@ vendor/
 /frontend/node_modules/
 /frontend/cypress/screenshots/
 
-
 ####################################
 ### AIQA CI SCRIPTS - START
 ###
+### https://aiqa.tech
+### (c)2019 AIQA Technologies
+###
+### ver. 0.1.29
 
 __ci_scenarios_list.txt
 __ci_parallel.log
 __ci_result.txt
+
+_ci_vars_personal.sh
+
 
 /behat/aiqa.yml
 /behat/aiqa.tmp
@@ -61,8 +67,6 @@ __ci_result.txt
 /frontend/aiqa.tmp
 /frontend/status.tmp
 
-
 ###
 ### AIQA CI SCRIPTS - STOP
 ####################################
-

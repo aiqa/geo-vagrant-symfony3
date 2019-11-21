@@ -5,7 +5,7 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.25
+# ver. 0.1.29
 
 
 ####################################################################################
@@ -15,6 +15,8 @@
 ####################################################################################
 ####################################################################################
 
+
+CI_DEFAULT_RUN=
 
 # PARALLEL
 CI_PARALLEL_LOG_FILENAME=__ci_parallel.log
@@ -40,6 +42,12 @@ CI_SCENARIOS_FILEMASK="*.spec.js"
 
 CI_BACKEND_DIR="backend-php"
 
+CI_CUSTOM_RELOAD=1
 CI_CUSTOM_BUILD=1
+
+if [ -f "_ci_vars_personal.sh" ]; then
+    source _ci_vars_personal.sh
+fi
+
 
 # vim:ts=4:sw=4:et:syn=sh:
