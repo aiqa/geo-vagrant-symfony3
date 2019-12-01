@@ -1,18 +1,13 @@
 <?php
 
 use Behat\Behat\Context\Context;
-use Behat\MinkExtension\Context\MinkContext;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
-
 use Behat\Behat\Hook\Scope\BeforeScenarioScope;
-use Behatch\Context\JsonContext;
-use Behatch\Context\RestContext;
-use Behatch\Context\DebugContext;
-use Behat\Mink\Exception\ExpectationException;
-use Symfony\Component\Finder\Finder;
-use Symfony\Component\Yaml\Yaml;
+use Behat\Gherkin\Node\PyStringNode;
 
+use Behat\Mink\Exception\ExpectationException;
+use Behat\MinkExtension\Context\MinkContext;
+use Behatch\Context\RestContext;
+use Symfony\Component\Yaml\Yaml;
 
 class FeatureContext extends MinkContext implements Context
 {
@@ -38,7 +33,6 @@ class FeatureContext extends MinkContext implements Context
 
     public function __construct(array $parameters)
     {
-
         $this->apiUrl = $parameters['base_url'];
     }
 
@@ -59,7 +53,7 @@ class FeatureContext extends MinkContext implements Context
     protected function getSaved($index, $subindex = null)
     {
         if (isset($this->saved[$index])) {
-            if ($subindex === null) {
+            if (null === $subindex) {
                 return $this->saved[$index];
             } else {
                 if (isset($this->saved[$index][$subindex])) {
@@ -86,8 +80,7 @@ class FeatureContext extends MinkContext implements Context
 
     public function getHttpieCommand(
         $method, $url, $body = null, $headers = [], $filenames = null
-    )
-    {
+    ) {
         $url = $this->apiUrl . $url;
 
         $withFiles = '';
@@ -119,7 +112,6 @@ class FeatureContext extends MinkContext implements Context
             if (is_string($filenames)) {
                 $resultHttpieCmd .= ' file[0]@/app/fixtures/' . $filenames;
             } elseif (is_array($filenames)) {
-
                 foreach ($filenames as $k => $filename) {
                     $resultHttpieCmd .= ' file[' . $k . ']@/app/fixtures/' . $filename;
                 }
@@ -160,6 +152,7 @@ class FeatureContext extends MinkContext implements Context
             foreach ($headers as $headerKey => $headerValue) {
                 $result .= $headersConnector . $headerKey . $keyValueConnector . $headerValue;
             }
+
             return trim($result, $headersConnector);
         }
     }
@@ -383,14 +376,13 @@ class FeatureContext extends MinkContext implements Context
     {
         $response = (array) json_decode($this->lastRequest->getContent(), true);
 
-        if(key_exists($arg1, $response)) {
+        if (key_exists($arg1, $response)) {
             $node_val = $response[$arg1];
 
-            if(!is_float($node_val)) {
+            if (!is_float($node_val)) {
                 throw new Exception($node_val . ' is not a floating point');
             }
-        }
-        else {
+        } else {
             throw new Exception('Feature doesnt have property ' . $arg1);
         }
     }
@@ -417,7 +409,7 @@ class FeatureContext extends MinkContext implements Context
         foreach ($json as $element) {
             if ($element['id'] === $index) {
                 if ($element[$field] === $value) {
-                        return true;
+                    return true;
                 }
             }
         }
