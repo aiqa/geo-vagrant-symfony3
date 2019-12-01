@@ -228,6 +228,7 @@ class FeatureContext extends MinkContext implements Context
         );
         $this->publishDebugInfo('HTTPIE COMMAND', $sHttpieCommand);
 
+        $this->lastRequest = $this->restContext->iAddHeaderEqualTo('Content-Type', 'application/json');
         $this->lastRequest = $this->restContext->iSendARequestToWithBody($method, $url, $newBody);
 
         return $this->lastRequest;
