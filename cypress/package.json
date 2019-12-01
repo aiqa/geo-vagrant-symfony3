@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-dev": "cypress run -c baseUrl=https://geography.lh",
-    "open-dev": "cypress open -c baseUrl=https://geography.lh",
+    "test-dev": "cypress run -c baseUrl=http://geography.lh",
+    "open-dev": "cypress open -c baseUrl=http://geography.lh",
     "test-local": "cypress run -c baseUrl=http://localhost:3000",
     "open-local": "cypress open -c baseUrl=http://localhost:3000"
   },

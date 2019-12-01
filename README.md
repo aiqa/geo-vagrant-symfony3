@@ -70,7 +70,7 @@ cd geo-vagrant-symfony3
 
 ### 3.4. Visit homepage
 
-* [https://geography.lh](https://geography.lh)
+* [http://geography.lh](http://geography.lh)
 
 
 ## 4. REST API documentation

@@ -1,6 +1,6 @@
 {
   "env": {
-    "HOST": "https://geography.lh",
+    "HOST": "http://geography.lh",
     "TIMEOUT": 500
   },
   "video": false,

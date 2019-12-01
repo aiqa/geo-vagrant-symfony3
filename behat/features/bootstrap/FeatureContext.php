@@ -26,7 +26,7 @@ class FeatureContext extends MinkContext implements Context
      *
      * This value should be read from behat.yml: base_url
      */
-    private $apiUrl = 'https://geography.lh';
+    private $apiUrl = 'http://geography.lh';
 
     /**
      * @var RestContext

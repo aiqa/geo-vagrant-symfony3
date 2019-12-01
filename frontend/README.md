@@ -35,7 +35,7 @@ You will also see any lint errors in the console.
 `yarn build`
 
 Builds the app for production to the `dist` folder.<br>
-Open [https://geography.lh/](https://geography.lh/) to view deployed production build in the browser.
+Open [http://geography.lh/](http://geography.lh/) to view deployed production build in the browser.
 
 ---
 
@@ -44,7 +44,7 @@ Open [https://geography.lh/](https://geography.lh/) to view deployed production 
 
 `yarn e2e-dev`
 
-Runs protractor tests in _browser_ for [https://geography.lh/](https://geography.lh/)
+Runs protractor tests in _browser_ for [http://geography.lh/](http://geography.lh/)
 
 `yarn e2e-local`
 
@@ -66,7 +66,7 @@ Add `--headless` flag to run tests only in _CLI_, without displaying the browser
 
 `yarn test-dev`
 
-Runs cypress tests in _CLI_ for [https://geography.lh/](https://geography.lh/)
+Runs cypress tests in _CLI_ for [http://geography.lh/](http://geography.lh/)
 
 `yarn test-local`
 
@@ -74,7 +74,7 @@ Runs cypress tests in _CLI_ for [http://localhost:3000](http://localhost:3000)
 
 `yarn open-dev`
 
-Runs cypress tests in _browser_ for [https://geography.lh/](https://geography.lh/)
+Runs cypress tests in _browser_ for [http://geography.lh/](http://geography.lh/)
 
 `yarn open-local`
 
