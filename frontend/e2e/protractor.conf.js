@@ -6,7 +6,7 @@ exports.config = {
   framework: 'jasmine',
   specs: ['./protractor/**/*.spec.js'],
 
-  baseUrl: 'https://geography.lh',
+  baseUrl: 'http://geography.lh',
   directConnect: true,
 
   getPageTimeout: 10000,

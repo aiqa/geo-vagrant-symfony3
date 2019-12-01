@@ -13,7 +13,7 @@ default:
             contexts:
                 - FeatureContext:
                     parameters:
-                       base_url:  'https://geography.lh'
+                       base_url:  'http://geography.lh'
                 - behatch:context:browser
                 - behatch:context:debug
                 - behatch:context:system
@@ -24,7 +24,7 @@ default:
 
     extensions:
         Behat\MinkExtension:
-            base_url:  'https://geography.lh/'
+            base_url:  'http://geography.lh/'
             browser_name: chrome
             sessions:
                 default:

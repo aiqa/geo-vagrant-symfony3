@@ -6,7 +6,7 @@ info:
         url: 'https://aiqa.tech'
         email: contact@aiqa.tech
 servers:
-    -   url: "https://geography.lh"
+    -   url: "http://geography.lh"
         description: "Local environment"
 tags:
     -   name: city

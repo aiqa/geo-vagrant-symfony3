@@ -33,7 +33,7 @@ CI_SCENARIOS_LIST_FILENAME=__ci_scenarios_list.txt
 CI_FINAL_TEST_RESULT_FILENAME=__ci_result.txt
 
 
-CI_TEST_RUNNER_COMMAND="yarn cypress run -c baseUrl=https://geography.lh --spec {}"
+CI_TEST_RUNNER_COMMAND="yarn cypress run -c baseUrl=http://geography.lh --spec {}"
 
 
 CI_SCENARIOS_DIR="cypress/integration"
