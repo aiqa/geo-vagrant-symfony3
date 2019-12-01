@@ -47,6 +47,7 @@ srcFiles:
             directory: 'vendor'
 configuration:
     exportFilename: 'someFile.yml'
+    mlService: 'local'
 pdepend:
     binaryPath: '/app-var/vendor/pdepend/pdepend/src/bin/pdepend'
 encryption: false
