@@ -5,16 +5,35 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.29
+# ver. 0.1.32
 
 source _ci_vars.sh
 
+
 CMD_PARAM=
+if [ "$1" == "--full-set" ]; then
+    CMD_PARAM="--strategy=full-set"
+fi
+if [ "$1" == "--all" ]; then
+    CMD_PARAM="--strategy=all"
+fi
+if [ "$1" == "--none" ]; then
+    CMD_PARAM="--strategy=all"
+fi
+if [ "$1" == "--one" ]; then
+    CMD_PARAM="--strategy=all"
+fi
+if [ "$1" == "--random1" ]; then
+    CMD_PARAM="--strategy=random1"
+fi
+if [ "$1" == "--random3" ]; then
+    CMD_PARAM="--strategy=random3"
+fi
 if [ "$1" == "--predict" ]; then
-    CMD_PARAM="--predict"
+    CMD_PARAM="--strategy=predict"
 fi
 if [ "$1" == "--predict-divided" ]; then
-    CMD_PARAM="--predict-divided"
+    CMD_PARAM="--strategy=predict-divided"
 fi
 
 if [ ! "$1" == "--rerun" ]; then
@@ -28,6 +47,12 @@ if [ ! "$1" == "--rerun" ]; then
     echo "==============================================================="
     echo "START: build:testsToRun"
     aiqa build:testsToRun ${CMD_PARAM} > ${CI_SCENARIOS_LIST_FILENAME}
+
+    CI_FINAL_TEST_RESULT=$?
+    echo "CI_FINAL_TEST_RESULT[_ci_aiqa.sh][AFTER build:testsToRun] = ${CI_FINAL_TEST_RESULT}"
+    if [ "${CI_FINAL_TEST_RESULT}" -gt 0 ]; then
+        exit ${CI_FINAL_TEST_RESULT}
+    fi
 else
     echo "==============================================================="
     echo "RERUN: build:failedTests"
@@ -50,6 +75,8 @@ echo "START: verify results"
 ./_ci_verify_tests_results.sh
 
 CI_FINAL_TEST_RESULT=$?
+
+echo "CI_FINAL_TEST_RESULT[_ci_aiqa.sh] = ${CI_FINAL_TEST_RESULT}"
 
 if [ ! "$1" == "--rerun" ]; then
     echo "==============================================================="

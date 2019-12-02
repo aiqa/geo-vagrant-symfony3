@@ -5,11 +5,16 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.29
+# ver. 0.1.32
 
 #
 # PARAMETERS
 #    --full-set        - full set with AIQA system
+#    --all             - full set with AIQA system
+#    --none            - full set with AIQA system
+#    --one             - full set with AIQA system
+#    --random1         - full set with AIQA system
+#    --random3         - full set with AIQA system
 #    --predict         - prediction by AIQA system
 #    --predict-divided - prediction by AIQA system with division of the case
 #    --rerun           - run only the tests that failed in the previous run
@@ -50,10 +55,15 @@ fi
 
 ./_ci_aiqa.sh ${CI_CURRENT_RUN}
 
+CI_FINAL_TEST_RESULT=$?
+
+echo "CI_FINAL_TEST_RESULT[ci.sh] = ${CI_FINAL_TEST_RESULT}"
+
 echo "==============================================================="
 echo CURRENT RUN: ${CI_CURRENT_RUN}
 echo "==============================================================="
 
-exit $?
+
+exit ${CI_FINAL_TEST_RESULT}
 
 # vim:ts=4:sw=4:et:syn=sh:
