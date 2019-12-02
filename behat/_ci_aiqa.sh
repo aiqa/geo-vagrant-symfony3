@@ -18,7 +18,7 @@ if [ "$1" == "--all" ]; then
     CMD_PARAM="--strategy=all"
 fi
 if [ "$1" == "--none" ]; then
-    CMD_PARAM="--strategy=all"
+    CMD_PARAM="--strategy=none"
 fi
 if [ "$1" == "--one" ]; then
     CMD_PARAM="--strategy=all"
