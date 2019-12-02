@@ -5,11 +5,11 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.29
+# ver. 0.1.32
 
 source _ci_vars.sh
 
-echo "========================>BUILD/START<========================"
+echo "========================>CUSTOM BUILD/START<========================"
 cd ../frontend
 yarn
 yarn build
@@ -17,4 +17,4 @@ cd ../cypress
 
 yarn
 
-echo "========================>BUILD/STOP<========================"
+echo "========================>CUSTOM BUILD/STOP<========================"
