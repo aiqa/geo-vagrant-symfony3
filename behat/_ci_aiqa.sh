@@ -5,7 +5,7 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.34
+# ver. 0.1.35
 
 source _ci_vars.sh
 
@@ -43,10 +43,24 @@ if [ ! "$1" == "--rerun" ]; then
     aiqa build:start ${CMD_PARAM}
     echo "==============================================================="
     echo "START: initialize:tests"
-    time aiqa initialize:tests
+    aiqa initialize:tests
+
+    CI_FINAL_TEST_RESULT=$?
+    echo "CI_FINAL_TEST_RESULT[_ci_aiqa.sh][AFTER aiqa initialize:tests] = ${CI_FINAL_TEST_RESULT}"
+    if [ "${CI_FINAL_TEST_RESULT}" -gt 0 ]; then
+        exit ${CI_FINAL_TEST_RESULT}
+    fi
+
     echo "==============================================================="
     echo "START: initialize:src"
-    time aiqa initialize:src
+    aiqa initialize:src
+
+    CI_FINAL_TEST_RESULT=$?
+    echo "CI_FINAL_TEST_RESULT[_ci_aiqa.sh][AFTER aiqa initialize:src] = ${CI_FINAL_TEST_RESULT}"
+    if [ "${CI_FINAL_TEST_RESULT}" -gt 0 ]; then
+        exit ${CI_FINAL_TEST_RESULT}
+    fi
+
     echo "==============================================================="
     echo "START: build:testsToRun"
     aiqa build:testsToRun ${CMD_PARAM} > ${CI_SCENARIOS_LIST_FILENAME}
