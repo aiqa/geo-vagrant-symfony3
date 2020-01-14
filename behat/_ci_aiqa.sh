@@ -5,7 +5,7 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.35
+# ver. 0.1.38
 
 source _ci_vars.sh
 
@@ -37,6 +37,9 @@ if [ "$1" == "--predict-divided" ]; then
 fi
 if [ "$1" == "--smoke" ]; then
     CMD_PARAM="--strategy=smoke"
+fi
+if [ "$1" == "--knn" ]; then
+    CMD_PARAM="--strategy=knn"
 fi
 
 if [ ! "$1" == "--rerun" ]; then

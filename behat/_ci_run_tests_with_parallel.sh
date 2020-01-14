@@ -5,16 +5,20 @@
 #
 # (c)2019 AIQA Technologies
 #
-# ver. 0.1.35
+# ver. 0.1.38
 
 source _ci_vars.sh
 
 ___CI_PARALLEL_EXIT_STRATEGY=
-if [ "$1" == "--predict" ]; then
+if [ "$1" == "--strategy=predict" ]; then
     ___CI_PARALLEL_EXIT_STRATEGY=${CI_PARALLEL_EXIT_STRATEGY}
 fi
 
-if [ "$1" == "--predict-divided" ]; then
+if [ "$1" == "--strategy=knn" ]; then
+    ___CI_PARALLEL_EXIT_STRATEGY=${CI_PARALLEL_EXIT_STRATEGY}
+fi
+
+if [ "$1" == "--strategy=predict-divided" ]; then
     ___CI_PARALLEL_EXIT_STRATEGY=${CI_PARALLEL_EXIT_STRATEGY}
 fi
 
