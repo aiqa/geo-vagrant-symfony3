@@ -13,7 +13,7 @@
     "babel-eslint": "^10.0.2",
     "classnames": "^2.2.6",
     "cypress-xpath": "^1.4.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "notistack": "^0.8.9",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
